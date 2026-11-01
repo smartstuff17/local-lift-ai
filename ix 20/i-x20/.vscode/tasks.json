@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start API",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\python.exe -m uvicorn app.main:app --reload",
+      "options": { "cwd": "${workspaceFolder}\\backend" },
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Start dashboard",
+      "type": "npm",
+      "script": "dev",
+      "path": "frontend",
+      "problemMatcher": [],
+      "isBackground": true
+    }
+  ]
+}
